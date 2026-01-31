@@ -35,12 +35,33 @@ else
     // Verificamos que están los datos. 
     if (isset($_POST['nombre']) && isset($_POST['email'])) 
     { 
+
+
+
+
+        $nombre = trim($_POST['nombre']);
+        $email  = trim($_POST['email']);
+
+        if ($nombre === '' || $email === '') {
+            http_response_code(422);
+            $json['message'] = 'Nombre y email son obligatorios.';
+            echo json_encode($json);
+            exit;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            http_response_code(422);
+            $json['message'] = 'El email no tiene un formato válido.';
+            echo json_encode($json);
+            exit;
+        }
+
         // Creamos el objeto para insertar el cliente. 
         $clientes = new ClientesBD(); 
  
         // Le damos los valores a insertar. 
-        $clientes->nombre = $_POST['nombre']; 
-        $clientes->email = $_POST['email']; 
+        $clientes->nombre = $nombre; 
+        $clientes->email = $email; 
  
         // Si no se ha podido insertar, error. 
         if (($clientes->Insertar() == -1) || $clientes->Error()) 

@@ -52,7 +52,7 @@ else
         } 
         else 
         { 
-            $json['message'] = 'Cliente insertado.'; 
+            $json['message'] = 'Cliente nuevo'; 
  
             // Código de respuesta - 201 Created 
             http_response_code(201);            

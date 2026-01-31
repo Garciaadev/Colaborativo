@@ -18,6 +18,9 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
    
 // Incluimos la gestión de la tabla clientes. 
 include_once('../bd/clientes.php'); 
+
+// JSON con el mensaje de respuesta.
+$json = array();
  
 // Si no nos envían los datos por POST. 
 if ($_SERVER['REQUEST_METHOD'] != "POST") 

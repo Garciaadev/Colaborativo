@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] != "GET")
     // Código de respuesta - Method Not Alloweb
         http_response_code(405);     
  
-    $json['message'] = 'Sólo se permite el método GET.'; 
+    $json['message'] = 'Sólo se permite el método GET .'; 
 } 
 else 
 { 

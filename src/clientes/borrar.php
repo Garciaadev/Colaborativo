@@ -1,5 +1,5 @@
 <?php 
-// Headers necesarios. 
+
  
 // Permitimos que el archivo pueda ser leído por cualquier usuario. 
 header("Access-Control-Allow-Origin: *"); 
@@ -8,8 +8,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8"); 
  
 // Recibimos los datos por POST. 
-header("Access-Control-Allow-Methods: GET"); 
-   
+header("Access-Control-Allow-Methods: DELETE"); 
 // Incluimos la gestión de la tabla clientes. 
 include_once('../bd/clientes.php'); 
  

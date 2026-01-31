@@ -145,6 +145,15 @@ git commit -m "Añadida nueva funcionalidad"
 
 5. Subir la rama al repositorio y crear un Pull Request.
 
+
+## Endpoints
+
+- GET /clientes
+- GET /clientes{id}
+- POST /clientes
+- PUT /clientes{id}
+- DELETE /clientes{id}
+
 ## Menciones
 
 @David Sabater 

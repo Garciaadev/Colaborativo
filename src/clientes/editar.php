@@ -59,7 +59,7 @@ else
         // No se ha modificado nada. 
         elseif ($filas == 0) 
         { 
-            $json['message'] = 'Cliente no modificado.'; 
+            $json['message'] = 'Cliente no actualizado.'; 
  
             // Código de respuesta - 400 Bad Request 
             http_response_code(400); 
